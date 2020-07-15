@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="USS - DEV">
+    <title>TODO Aluno</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .jumbotron {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 0;
+        background-color: #fff;
+      }
+      @media (min-width: 768px) {
+        .jumbotron {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+      
+      .jumbotron p:last-child {
+        margin-bottom: 0;
+      }
+      
+      .jumbotron h1 {
+        font-weight: 300;
+      }
+      
+      .jumbotron .container {
+        max-width: 40rem;
+      }
+      
+      footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      
+      footer p {
+        margin-bottom: .25rem;
+      }
+
+      .done .card-body {
+        text-decoration: line-through;
+        background-color: #c9c9c9;
+      }
+
+      .done button {
+        visibility: hidden;
+      }
+      
+    </style>
+  </head>
+  <body cz-shortcut-listen="true">
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Sobre</h4>
+          <p class="text-muted">Projeto criado para apresentar o Bootstrap v4.5 para os DEVs do Curso de Engenharia de Software da Universidade de Vassoras.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contato</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Twitter</a></li>
+            <li><a href="#" class="text-white">Facebook</a></li>
+            <li><a href="#" class="text-white">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg width="20" height="20"  viewBox="0 0 16 16"  class="mr-2"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3.214 1.072C4.813.752 6.916.71 8.354 2.146A.5.5 0 0 1 8.5 2.5v11a.5.5 0 0 1-.854.354c-.843-.844-2.115-1.059-3.47-.92-1.344.14-2.66.617-3.452 1.013A.5.5 0 0 1 0 13.5v-11a.5.5 0 0 1 .276-.447L.5 2.5l-.224-.447.002-.001.004-.002.013-.006a5.017 5.017 0 0 1 .22-.103 12.958 12.958 0 0 1 2.7-.869zM1 2.82v9.908c.846-.343 1.944-.672 3.074-.788 1.143-.118 2.387-.023 3.426.56V2.718c-1.063-.929-2.631-.956-4.09-.664A11.958 11.958 0 0 0 1 2.82z"/>
+          <path fill-rule="evenodd" d="M12.786 1.072C11.188.752 9.084.71 7.646 2.146A.5.5 0 0 0 7.5 2.5v11a.5.5 0 0 0 .854.354c.843-.844 2.115-1.059 3.47-.92 1.344.14 2.66.617 3.452 1.013A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.276-.447L15.5 2.5l.224-.447-.002-.001-.004-.002-.013-.006-.047-.023a12.582 12.582 0 0 0-.799-.34 12.96 12.96 0 0 0-2.073-.609zM15 2.82v9.908c-.846-.343-1.944-.672-3.074-.788-1.143-.118-2.387-.023-3.426.56V2.718c1.063-.929 2.631-.956 4.09-.664A11.956 11.956 0 0 1 15 2.82z"/>
+        </svg>
+        <strong>TODO</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Tarefas</h1>
+      <p class="lead text-muted">Bora organizar essa vida?</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Concluídas</a>
+        <a href="#" class="btn btn-danger my-2">Pendente</a>
+        <a href="#" class="btn btn-secondary my-2" data-toggle="modal" data-target="#modalCadastro">Cadastrar</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row" id="list-tasks">
+        <!-- <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Tarefa Inicial para testarmos</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">01/07/2020</small>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Concluir</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#"><svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-arrow-bar-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M11.354 5.854a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L8 3.207l2.646 2.647a.5.5 0 0 0 .708 0z"/>
+        <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-1 0v6.5a.5.5 0 0 0 .5.5zm-4.8 1.6c0-.22.18-.4.4-.4h8.8a.4.4 0 0 1 0 .8H3.6a.4.4 0 0 1-.4-.4z"/>
+      </svg></a>
+    </p>
+    
+  </div>
+</footer>
+
+
+<div class="modal" id="modalCadastro" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cadastrar tarefa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Tarefa:</label>
+            <input type="text" class="form-control" id="tarefa" placeholder="Nova tarefa">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Data:</label>
+            <input type="date" class="form-control" id="tarefa-data">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" id="bt-cadastrar">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+  appendTask = (task) => {
+    const item = `
+    <div class="col-md-4 ${!task.status ? 'done' : ''}">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <p class="card-text">${task.descricao}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">${task.dt}</small>
+            <div class="btn-group">
+              <button type="button" name="concluir" data-id="${task.id}" class="btn btn-sm btn-outline-secondary">Concluir</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    `;
+    $('#list-tasks').append(item);
+  }
+
+  let tasks = [];
+  createList = () => {
+    $('#list-tasks').html('');
+    tasks = localStorage['tasks'] ? JSON.parse(localStorage['tasks']) : [];
+    tasks.forEach((task) => {
+        appendTask(task);
+    });
+  }
+
+  createList();
+
+  addTask = () => {
+      const item = {
+        id: new Date().getTime(),
+        descricao: $('#tarefa').val(),
+        dt: $('#tarefa-data').val(),
+        status: true,
+      }
+      
+      tasks.push(item);
+      
+      localStorage["tasks"] = JSON.stringify(tasks);
+      
+      appendTask(item);
+  }
+
+  $('#bt-cadastrar').click(addTask);
+  $('button[name=concluir]').on( 'click', function() {
+    const id = $(this).data('id');
+    const i = tasks.findIndex(item => item.id == id);
+    console.log(i)
+    if (i >= 0) {
+      tasks[i].status = false;
+      localStorage["tasks"] = JSON.stringify(tasks);
+    }
+
+    createList();
+  });
+});
+</script>
+
+</body></html>
